@@ -1,0 +1,95 @@
+<!-- NAME: MARAMREDDY KRISHNA ANANDA REDDY
+ROLL NO: 200001042 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{url_for('static', filename='logo.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{url_for('static', filename='logo.png')}}" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            IIT INDORE
+        </a>
+        <div>
+            <b>{{username}}</b>
+            <a href="{{ url_for('logout') }}"><b>logout</b></a>
+        </div>
+    </nav>
+    <div class="tablebox">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Course Code</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Contact Hours</th>
+                    <th scope="col">Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>CS 201</b></td>
+                    <td>Discrete Mathematical Structures</td>
+                    <td>2-1-0</td>
+                    <td>3.0</td>
+                </tr>
+                <tr>
+                    <th>CS 203</th>
+                    <td>Data Structures and Algorithms</td>
+                    <td>2-1-0</td>
+                    <td>3.0</td>
+                </tr>
+                <tr>
+                    <th>CS 207</th>
+                    <td>Data Base & Information Systems</td>
+                    <td>3-0-0</td>
+                    <td>3.0</td>
+                </tr>
+                <tr>
+                    <th>CS 253</th>
+                    <td>Data Structures and Algorithms Lab</td>
+                    <td>0-0-3</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <th>CS 257</th>
+                    <td>Data Base & Information Systems Lab</td>
+                    <td>0-0-3</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <th>IC 211</th>
+                    <td>Experimental Engineering Lab</td>
+                    <td>0-0-3</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <th>MA 203</th>
+                    <td>Complex Analysis and Differential Equations-II</td>
+                    <td>3-1-0</td>
+                    <td>4.0</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><b>Total</b></td>
+                    <td>10-3-9</td>
+                    <td>17.5</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

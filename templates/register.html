@@ -1,0 +1,66 @@
+<!-- NAME: MARAMREDDY KRISHNA ANANDA REDDY
+ROLL NO: 200001042 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Register</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="shortcut icon" href="{{url_for('static', filename='logo.png')}}" type="image/x-icon">
+</head>
+
+<body>
+	<form action="{{ url_for('register') }}" method="post" autocomplete="off">
+		<section class=" my-4 mx-4" id="login">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-lg-6 px-5 text-center height 200px imgc">
+						<img src="{{url_for('static', filename='logo.png')}}" class="img-fluid p-4" alt="img">
+					</div>
+					<div class="col-lg-6 px-5 py-5">
+						<h1 class="py-4">REGISTER HERE</h1>
+						<h4>Sign up your account</h4>
+						<form id="login-form">
+							<div class="form-row">
+								<div class="col-lg-7">
+									<input type="text" name="username" placeholder="Username" id="username"
+										class="form-control my-3 p-3" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-lg-7">
+									<input type="number" name="mobile" placeholder="phone number" id="mobile"
+										class="form-control my-3 p-3" maxlength="12" minlength="10" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-lg-7">
+									<input type="password" name="password" placeholder="Password" id="password"
+										class="form-control my-3 p-3" required>
+									<div class="alertmsg msg" role="alert">
+										{{ msg }}
+									</div>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-lg-7">
+									<button type="submit" value="Register" class="btn1 mt-3 mb-5">Register</button>
+								</div>
+							</div>
+							<p>
+								<b>have an account? <a href="{{ url_for('login') }}" class="linkss">Login Here</a></b>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</form>
+</body>
+
+</html>
